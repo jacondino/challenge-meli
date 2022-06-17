@@ -1,0 +1,9 @@
+@import './media-queries';
+
+@mixin container {
+  padding: 30px 4em;
+
+  @include mobile {
+    padding: 20px 1em;
+  }
+}

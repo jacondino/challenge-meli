@@ -1,0 +1,68 @@
+@import '/styles';
+
+.headerHome {
+  @include container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $bg-color;
+  box-shadow: $boxShadow;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 25px 0;
+  }
+
+  &__search {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    > div {
+      width: 40%;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    span {
+      width: 20px;
+    }
+  }
+
+  &__user {
+    @include mobile {
+      display: none;
+    }
+
+    span {
+      width: 16px;
+    }
+  }
+
+  &__sideBarButton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    text-align: right;
+    border-top: 2px solid #efde38;
+    padding-top: 18px;
+    gap: 8px;
+
+    span {
+      width: 20px;
+    }
+  }
+}

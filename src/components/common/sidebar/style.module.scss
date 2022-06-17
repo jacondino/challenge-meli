@@ -1,0 +1,76 @@
+@import '/styles';
+
+$sidebar-border-color-grey: #e2e2e2;
+
+.sidebar {
+  @include mobile {
+    position: fixed;
+    right: -100%;
+    z-index: 9;
+    transition: right 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 4px 0 13px 0px #000000;
+  }
+
+  h3 {
+    padding: 5px;
+    text-align: center;
+  }
+
+  &__selected {
+    background: $primary-color;
+    border-radius: 0;
+
+    button,
+    button:hover {
+      color: $white-color;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      border-bottom: 1px solid $sidebar-border-color-grey;
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &:first-child {
+        border-top: 1px solid $sidebar-border-color-grey;
+      }
+
+      button {
+        width: 100%;
+        text-align: left;
+
+        @include mobile {
+          font-size: $fontSize-small;
+        }
+      }
+    }
+  }
+
+  &__close {
+    @include mobile {
+      span {
+        width: 20px;
+      }
+    }
+  }
+}
+
+.open {
+  @include mobile {
+    right: 0;
+  }
+}
+
+.close {
+  @include mobile {
+    right: -100%;
+  }
+}

@@ -1,0 +1,13 @@
+@import '/styles';
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 1px;
+
+  label,
+  input {
+    font-size: $fontSize-small;
+    cursor: pointer;
+  }
+}

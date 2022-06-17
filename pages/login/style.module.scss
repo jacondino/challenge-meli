@@ -1,0 +1,54 @@
+@import '/styles';
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  &__formBox {
+    background-color: $white-color;
+    border-radius: 4px;
+    display: grid;
+    grid-auto-columns: 50%;
+    grid-auto-flow: column;
+    width: 50%;
+    box-shadow: $boxShadow;
+
+    @include mobile {
+      width: 90%;
+      grid-auto-columns: 100%;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: $bg-color;
+
+    @include mobile {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -40px;
+      width: 119%;
+      top: -45px;
+      height: 128%;
+      opacity: 0.3;
+      background-size: 100px;
+      transform: rotate(11deg);
+      background-image: url('../../public/images/ml.png');
+    }
+  }
+
+  &__right {
+    padding: 3em;
+  }
+}

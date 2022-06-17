@@ -1,0 +1,42 @@
+@import '/styles';
+
+.button {
+  border: 0;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+
+  &__primary {
+    background-color: $primary-color;
+    color: $white-color;
+
+    &:hover {
+      background-color: $primary-color-hover;
+    }
+  }
+
+  &__transparent {
+    background-color: transparent;
+    color: $primary-color;
+
+    &:hover {
+      color: $primary-color-hover;
+    }
+  }
+
+  &__large {
+    padding: 10px 40px;
+    font-size: $fontSize-large;
+  }
+
+  &__medium {
+    padding: 10px 30px;
+    font-size: $fontSize-medium;
+  }
+
+  &__small {
+    padding: 10px 20px;
+    font-size: $fontSize-small;
+  }
+}

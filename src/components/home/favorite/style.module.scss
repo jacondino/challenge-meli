@@ -1,0 +1,11 @@
+@import '/styles';
+
+.favorite {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: 14px;
+  top: 14px;
+  color: $primary-color;
+  cursor: pointer;
+}

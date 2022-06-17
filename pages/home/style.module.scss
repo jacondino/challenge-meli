@@ -1,0 +1,29 @@
+@import '/styles';
+
+.home {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    'headerHome  headerHome'
+    'mainHome sidebarHome';
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    grid-area: headerHome;
+    @include container;
+  }
+
+  aside {
+    grid-area: sidebarHome;
+    background-color: $white-color;
+  }
+
+  main {
+    position: relative;
+    grid-area: mainHome;
+  }
+}

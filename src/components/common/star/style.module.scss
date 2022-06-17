@@ -1,0 +1,23 @@
+@import '/styles';
+
+.star {
+  margin: 0 0 3px;
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 2px;
+    width: 18px;
+    height: 18px;
+
+    &.on {
+      color: $primary-color;
+    }
+
+    &.off {
+      color: #afafaf;
+    }
+  }
+}
